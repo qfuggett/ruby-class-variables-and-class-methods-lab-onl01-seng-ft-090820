@@ -31,8 +31,13 @@ class Song
   
   def self.genre_count
     genre_count = { }
-    @@genres.each do |genre|      #for each iteration the genres become a key, it increments by 1 if the same genre iterates again, which is the number of songs
-    
+    @@genres.each do |genre|          
+      if genre_count[genre]
+        genre_count[genre] += 1
+      else genre_count[genre] = 1
+      end
+    end
+    genre_count
   end
   
   def self.artist_count
@@ -40,3 +45,7 @@ class Song
   end
   
 end
+
+
+#Notes
+##genre_count: for each iteration the genres stored in the @@genre class variable are stored in a hash as a key become a key, it increments by 1 if the same genre iterates again, which is the number of songs
