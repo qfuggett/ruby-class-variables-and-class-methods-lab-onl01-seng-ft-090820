@@ -14,6 +14,10 @@ class Song
     
   end
   
+  def new(name, artist, genre)
+    @name = name
+  end
+  
   def count
     @@count
   end
