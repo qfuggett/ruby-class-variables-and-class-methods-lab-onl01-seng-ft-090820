@@ -14,11 +14,7 @@ class Song
     @@count += 1
 
   end
-  
-  def new
-    @name = name
-  end
-  
+
   def self.count
     @@count = @count
   end
