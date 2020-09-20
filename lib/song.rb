@@ -31,7 +31,7 @@ class Song
   
   def self.genre_count
     genre_count = { }
-    binding.pry
+    @@genres.each do |genre|      #for each iteration the genres become a key, it increments by 1 if the same genre iterates again, which is the number of songs
     
   end
   
